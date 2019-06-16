@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+* { box-sizing: border-box; }
+::selection { background: rgba(0, 0, 0, 0.1); }
+
+html { font-size: 16px; }
+body {
+  margin: 0;
+  height: 100vh;
+  background: #f8f8f8 url(cover.png) right bottom no-repeat;
+}
+
+@media (max-height: 1000px) {
+  body { background-size: auto 80%; }
+}
+@media (max-width: 800px) {
+  body { background-size: contain; }
+}
