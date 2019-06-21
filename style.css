@@ -1,14 +1,71 @@
 @charset "utf-8";
 
 * { box-sizing: border-box; }
-::selection { background: rgba(0, 0, 0, 0.1); }
+::selection {
+  color: #444;
+  background: rgba(0, 0, 0, 0.1);
+}
 
 html { font-size: 16px; }
 body {
   margin: 0;
+  padding: 10rem;
   height: 100vh;
+  font-family: "Open Sans Condensed", sans-serif;
   background: #f8f8f8 url(cover.png) right bottom no-repeat;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-start;
 }
+
+a {
+  color: #f10000;
+  text-decoration: none;
+}
+
+header h1 {
+  font-family: "Special Elite";
+  font-weight: normal;
+}
+
+nav { margin-bottom: 1rem; }
+nav a {
+  width: 1.5rem;
+  margin: auto 0.25rem;
+  display: inline-block;
+}
+
+nav #facebook:hover  { fill: #4172B8; }
+nav #github:hover    { fill: #181717; }
+nav #instagram:hover { fill: #E4405F; }
+nav #linkedin:hover  { fill: #0077B5; }
+nav #telegram:hover  { fill: #2CA5E0; }
+nav #twitch:hover    { fill: #6441A4; }
+nav #twitter:hover   { fill: #1DA1F2; }
+nav #youtube:hover   { fill: #FF0000; }
+
+footer a:hover { color: #600; }
+
+.button {
+  width: 8rem;
+  margin: 0.5rem;
+  padding: 0 1rem 0.25rem;
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid #f10000;
+  border-radius: 0.25rem;
+}
+
+.button:hover {
+  color: #f8f8f8;
+  background: #f10000;
+}
+
+.fade { transition: all 250ms ease; }
 
 @media (max-height: 1000px) {
   body { background-size: auto 80%; }
