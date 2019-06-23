@@ -26,6 +26,11 @@ a {
   text-decoration: none;
 }
 
+header, footer {
+  width: 100%;
+  margin: 2rem auto;
+}
+
 header h1 {
   font-family: "Special Elite";
   font-weight: normal;
@@ -67,9 +72,26 @@ footer a:hover { color: #600; }
 
 .fade { transition: all 250ms ease; }
 
+@media (orientation: portrait) {
+  body {
+    text-align: center;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 1000px) {
+  body {
+    padding: 4rem;
+    background-size: auto 50%;
+  }
+}
 @media (max-height: 1000px) {
   body { background-size: auto 80%; }
 }
 @media (max-width: 800px) {
-  body { background-size: contain; }
+  html { font-size: 12px; }
+  body { padding: 2rem; }
+}
+@media (max-height: 500px) {
+  body { padding: 2rem; }
+  header, footer { margin: 1rem auto; }
 }
