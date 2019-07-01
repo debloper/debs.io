@@ -74,20 +74,15 @@ nav a {
   transform: scaleX(-1);
 }
 
+/* Content Layout Control */
 @media (orientation: portrait) {
   body {
     text-align: center;
     justify-content: flex-start;
   }
 }
-@media (max-height: 1000px) {
-  body { background-size: auto 80%; }
-}
-@media (max-width: 1000px) {
-  body {
-    padding: 4rem;
-    background-size: 100% auto;
-  }
+@media (max-width: 1200px) {
+  body { padding: 4rem; }
 }
 @media (max-width: 800px) {
   html { font-size: 12px; }
@@ -96,4 +91,15 @@ nav a {
 @media (max-height: 500px) {
   body { padding: 2rem; }
   header, footer { margin: 1rem auto; }
+}
+
+/* Background Sizing Control */
+@media (orientation: portrait) {
+  body { background-size: 80% auto; }
+}
+@media (orientation: landscape ) {
+  body { background-size: auto 80%; }
+}
+@media (max-aspect-ratio: 8/5) and (min-aspect-ratio: 5/8) {
+  body { background-size: 60%; }
 }
