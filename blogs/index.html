@@ -1,7 +1,48 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta http-equiv="refresh" content="0;url=https://debloper.blogspot.com/">
-    <title>Deb's Blog</title>
-  </head>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Soumya Deb's Personal Website">
+
+  <title>Deb's Blogs</title>
+
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMRw.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/specialelite/v10/XLYgIZbkc4JPUL5CVArUVL0ntnAOSA.woff2" crossorigin />
+  <link rel="stylesheet" href="/style.css" />
+
+</head>
+
+<body>
+  <header>
+    <h1>Take your pick...</h1>
+    <dl>
+      <dt><a target="_blank" rel="noopener noreferrer" href="https://debloper.blogspot.com/">Open Source Blog</a></dt>
+      <dd>On FOSS, Communities, personal projects and digital politics.</dd>
+      <dt><a target="_blank" rel="noopener noreferrer" href="https://medium.com/debloper">White, gray & dark matter</a></dt>
+      <dd>From astrophysics to metaphysics; original researches and thought experiments.</dd>
+      <dt><a target="_blank" rel="noopener noreferrer" href="https://debloper.wordpress.com/">Down Memory Lane</a></dt>
+      <dd>Backdated journal entries of my personal experiences.</dd>
+    </dl>
+  </header>
+
+  <footer>
+    <nav></nav>
+    <span id="copyleft">©</span>
+    Copyleft: Soumya Deb &mdash;
+    <a class="fade" target="_blank" rel="noopener noreferrer" href="http://archive.debs.io">All Wrongs Preserved</a>
+  </footer>
+
+  <script>
+    fetch('/footer.html').then(res => {
+      res.text().then(data => {
+        let e = document.querySelector("footer nav")
+        e.innerHTML = data
+      })
+    })
+  </script>
+</body>
+
 </html>

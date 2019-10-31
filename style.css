@@ -58,6 +58,12 @@ header p {
   font-size: 1.25rem;
 }
 
+dt {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+dd { margin: auto; }
+
 footer a:hover { color: #600; }
 
 nav { margin-bottom: 1rem; }
