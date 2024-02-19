@@ -104,6 +104,13 @@ nav a {
   transform: scaleX(-1);
 }
 
+#hero {
+  font-size: 4rem;
+  opacity: 33%;
+}
+
+#hero:hover { opacity: 100%; }
+
 /* Content Layout Control */
 @media (orientation: portrait) {
   body {

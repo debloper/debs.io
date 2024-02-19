@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Soumya Deb's Personal Website">
+
+  <title>Deb's Blogs</title>
+
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMRw.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/specialelite/v10/XLYgIZbkc4JPUL5CVArUVL0ntnAOSA.woff2" crossorigin />
+  <link rel="stylesheet" href="/style.css" />
+
+</head>
+
+<body>
+  <nav id="hero">
+    <a href="/">ΣΔ</a>
+  </nav>
+  <header>
+    <h1>Wish I could remember them all...</h1>
+    <dl>
+      <dt><a target="_blank" rel="noopener noreferrer" href="https://xplex.me/">xplex</a></dt>
+      <dd>A self-hosted, containerized, resource efficient RTMP multi-streaming service.</dd>
+      <dt><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@BreakerSpace">BreakerSpace</a></dt>
+      <dd>A YouTube channel featuring hands-on DIY technologies.</dd>
+      <dt><a target="_blank" rel="noopener noreferrer" href="https://www.deviantart.com/im-phreak">Old Artworks</a></dt>
+      <dd>An incredibly non-exhaustive list of my artworks in traditional & digital media.</dd>
+      <dt><a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/debloper/albums/">Travel & Photography</a></dt>
+      <dd>Back when I was a globetrotter & a shutterbug... thanks to Mozilla open source community.</dd>
+      <dt><a target="_blank" rel="noopener noreferrer" href="https://flux.ai/debloper">PCB Designs</a></dt>
+      <dd>Custom crafted printed circuit boards for electronics projects.</dd>
+      <dt><a target="_blank" rel="noopener noreferrer" href="https://archive.fosdem.org/2014/schedule/event/javascript_for_skeptics/">Tech Talks</a></dt>
+      <dd>Out of 200+ talks I've given between 2011-2016; this seems to be the only one still publicly available online.</dd>
+    </dl>
+  </header>
+
+  <footer>
+    <nav></nav>
+    <span id="copyleft">©</span>
+    Copyleft: Soumya Deb &mdash;
+    <a class="fade" target="_blank" rel="noopener noreferrer" href="http://archive.debs.io">All Wrongs Preserved</a>
+  </footer>
+
+  <script>
+    fetch('/footer.html').then(res => {
+      res.text().then(data => {
+        let e = document.querySelector("footer nav")
+        e.innerHTML = data
+      })
+    })
+  </script>
+</body>
+
+</html>
