@@ -44,16 +44,16 @@ a {
   text-decoration: none;
 }
 
-header, footer {
+main, footer {
   width: 100%;
   margin: 2rem auto;
 }
 
-header h1 {
+main h1 {
   font-family: "Special Elite";
   font-weight: normal;
 }
-header p {
+main p {
   width: 50%;
   font-size: 1.25rem;
 }
@@ -66,7 +66,10 @@ dd { margin: auto; }
 
 footer a:hover { color: #600; }
 
-nav { margin-bottom: 1rem; }
+nav {
+  height: 2rem;
+  margin-bottom: 1rem;
+}
 nav #facebook:hover  { fill: #4172B8; }
 nav #github:hover    { fill: #181717; }
 nav #instagram:hover { fill: #E4405F; }
@@ -117,7 +120,7 @@ nav a {
     text-align: center;
     justify-content: flex-start;
   }
-  header p { width: 100%; }
+  main p { width: 100%; }
 }
 @media (max-width: 1200px) {
   body { padding: 4rem; }
@@ -130,7 +133,7 @@ nav a {
 }
 @media (max-height: 500px) {
   body { padding: 2rem; }
-  header, footer { margin: 1rem auto; }
+  main, footer { margin: 1rem auto; }
 }
 
 /* Background Sizing Control */

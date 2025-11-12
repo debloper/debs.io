@@ -11,32 +11,30 @@
 
   <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMRw.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/specialelite/v10/XLYgIZbkc4JPUL5CVArUVL0ntnAOSA.woff2" crossorigin />
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="preload" as="style" href="/style.css" onload="this.rel='stylesheet'" />
 
 </head>
 
 <body>
-  <header>
+  <nav id="hero">
+    <a href="/">ΣΔ</a>
+  </nav>
+  <main>
     <h1>Hello there!</h1>
     <p>I'm a soul of child, trapped in his dad's body, with his grandpa's thoughts. I have a big mouth, bigger thumbs, and an even bigger neocortex (technically, the neocortex has me - it's a sweetoxic relationship). I am pretty good at moderating the relentless group discussions raging on inside my head; and gradually getting better at pretending to be a decent, approachable human being.</p>
     <p>I'm not into small-talks, but give me a topic, and I will keep you awake till the sun comes up. I yarn for people who can shut me up, and places where I'm not the smartest one in it. If you're still not sufficiently weirded out, there's a chance we can be friends.</p>
-    <p>Thanks for stopping by... and if your purpose of visit is 'business', then <a href="https://cv.debs.io/" target="_blank" title="Résumé">here's my résumé</a> (<a href="https://cv.debs.io/pdf/" target="_blank" title="Download PDF">PDF</a>).</p>
-  </header>
+    <p>Thanks for stopping by&mdash;and if your purpose of visit is 'business', then my apologies to have you sit through all this... here's <a href="https://cv.debs.io/" target="_blank" title="Résumé">my résumé</a> (<a href="https://cv.debs.io/pdf/" target="_blank" title="Download PDF">PDF</a>).</p>
+  </main>
 
   <footer>
-    <nav></nav>
+    <nav>&nbsp;</nav>
     <span id="copyleft">©</span>
     Copyleft: Soumya Deb &mdash;
     <a class="fade" target="_blank" rel="noopener noreferrer" href="http://archive.debs.io">All Wrongs Preserved</a>
   </footer>
 
   <script>
-    fetch('/footer.html').then(res => {
-      res.text().then(data => {
-        let e = document.querySelector("footer nav")
-        e.innerHTML = data
-      })
-    })
+    document.addEventListener("DOMContentLoaded", () => fetch('/footer.html').then(res => res.text().then(data => document.querySelector("footer nav").innerHTML = data)))
   </script>
 </body>
 
